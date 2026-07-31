@@ -38,7 +38,7 @@ const processTranslations = () => {
         `${file} has ${fileKeysCount} keys (${percentage.toFixed(2)}%).`,
       );
 
-      if (percentage < 50) {
+      if (percentage < 20) {
         fs.unlinkSync(filePath);
         console.log(`Deleted ${file} due to insufficient keys.`);
       } else {
