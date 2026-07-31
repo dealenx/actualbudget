@@ -111,7 +111,7 @@ jobs:
           context: .
           push: true
           file: packages/sync-server/docker/ubuntu.Dockerfile
-          platforms: linux/amd64,linux/arm64,linux/arm/v7
+          platforms: linux/amd64
           tags: ${{ steps.meta.outputs.tags }}
 
       - name: Build alpine image for testing
@@ -137,7 +137,7 @@ jobs:
           context: .
           push: true
           file: packages/sync-server/docker/alpine.Dockerfile
-          platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
+          platforms: linux/amd64
           tags: ${{ steps.alpine-meta.outputs.tags }}
 
       - name: Dump container logs on failure
